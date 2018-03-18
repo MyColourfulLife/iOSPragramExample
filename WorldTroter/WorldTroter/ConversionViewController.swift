@@ -7,11 +7,31 @@
 //
 
 import UIKit
+import MapKit
 
 class ConversionViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet var celsiusLabel:UILabel!
     @IBOutlet var textField:UITextField!
+    
+    var randomColor:UIColor {
+        let red = CGFloat(arc4random()%256)/255.0
+        let green = CGFloat(arc4random()%256)/255.0
+        let blue = CGFloat(arc4random()%256)/255.0
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("ConversionViewController load it's view.")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.backgroundColor = randomColor
+    }
+    
     
     let numberFormatter:NumberFormatter = {
         let nf = NumberFormatter()

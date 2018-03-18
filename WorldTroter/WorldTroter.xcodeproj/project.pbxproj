@@ -14,6 +14,7 @@
 		D1D3A024205D7A4500243205 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3A023205D7A4500243205 /* ConversionViewController.swift */; };
 		D1D3A027205E35A000243205 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D3A026205E35A000243205 /* MapKit.framework */; };
 		D1D3A029205E383300243205 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3A028205E383300243205 /* MapViewController.swift */; };
+		D1D3A02B205EC18000243205 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D3A02A205EC18000243205 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D1D3A023205D7A4500243205 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		D1D3A026205E35A000243205 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D1D3A028205E383300243205 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D1D3A02A205EC18000243205 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D180251D205BF8CF00791803 /* AppDelegate.swift */,
 				D1D3A023205D7A4500243205 /* ConversionViewController.swift */,
 				D1D3A028205E383300243205 /* MapViewController.swift */,
+				D1D3A02A205EC18000243205 /* WebViewController.swift */,
 				D1802521205BF8CF00791803 /* Main.storyboard */,
 				D1802524205BF8CF00791803 /* Assets.xcassets */,
 				D1802526205BF8CF00791803 /* LaunchScreen.storyboard */,
@@ -154,6 +157,7 @@
 				D1D3A024205D7A4500243205 /* ConversionViewController.swift in Sources */,
 				D1D3A029205E383300243205 /* MapViewController.swift in Sources */,
 				D180251E205BF8CF00791803 /* AppDelegate.swift in Sources */,
+				D1D3A02B205EC18000243205 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

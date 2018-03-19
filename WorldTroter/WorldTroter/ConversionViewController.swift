@@ -58,6 +58,7 @@ class ConversionViewController: UIViewController,UITextFieldDelegate {
     
     func updateCelsiusLabel() {
         if let value:Double = celsiusValue {
+            
             let valuen = NSNumber(value:value)
             celsiusLabel.text = numberFormatter.string(from:valuen)
         } else {
@@ -72,8 +73,8 @@ class ConversionViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func fahrenHeitFieldEditingChanged(textField:UITextField) {
         
-        if let text = textField.text, let value = Double(text) {
-            fahrenHeitValues = value
+        if let text = textField.text, let number = numberFormatter.number(from: text) {
+            fahrenHeitValues = number.doubleValue
         } else {
             fahrenHeitValues = nil
         }
@@ -82,17 +83,19 @@ class ConversionViewController: UIViewController,UITextFieldDelegate {
     
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let existingTextHasDecimalSepartor = textField.text?.range(of: ".")
-        let replacementTextHasDecimalSepartor = string.range(of: ".")
         
-        let set = NSCharacterSet(charactersIn: "0123456789.");
+        let currentLocal = NSLocale.current
+        let existingTextHasDecimalSepartor = textField.text?.range(of: currentLocal.decimalSeparator!)
+        let replacementTextHasDecimalSepartor = string.range(of: currentLocal.decimalSeparator!)
         
-        for i in 0 ..< string.lengthOfBytes(using: .utf8) {
-            let char = (string as NSString).character(at: i)
-            if !set.characterIsMember(char) {
-                return false;
-            }
-        }
+//        let set = NSCharacterSet(charactersIn: "0123456789.");
+//
+//        for i in 0 ..< string.lengthOfBytes(using: .utf8) {
+//            let char = (string as NSString).character(at: i)
+//            if !set.characterIsMember(char) {
+//                return false;
+//            }
+//        }
         
         return !(existingTextHasDecimalSepartor != nil && replacementTextHasDecimalSepartor != nil)
     }

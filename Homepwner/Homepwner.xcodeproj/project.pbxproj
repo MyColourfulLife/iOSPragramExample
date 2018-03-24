@@ -15,6 +15,7 @@
 		D1A0FF9420629A2A00B337F4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A0FF9320629A2A00B337F4 /* Item.swift */; };
 		D1A0FF9620629D2F00B337F4 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A0FF9520629D2E00B337F4 /* ItemStore.swift */; };
 		D1A0FF982065440400B337F4 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A0FF972065440400B337F4 /* ItemCell.swift */; };
+		D1A0FF9A2066B95600B337F4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A0FF992066B95600B337F4 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D1A0FF9320629A2A00B337F4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D1A0FF9520629D2E00B337F4 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		D1A0FF972065440400B337F4 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		D1A0FF992066B95600B337F4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				D1A0FF9520629D2E00B337F4 /* ItemStore.swift */,
 				D1A0FF9320629A2A00B337F4 /* Item.swift */,
 				D1A0FF972065440400B337F4 /* ItemCell.swift */,
+				D1A0FF992066B95600B337F4 /* DetailViewController.swift */,
 				D1A0FF832062993C00B337F4 /* Main.storyboard */,
 				D1A0FF862062993C00B337F4 /* Assets.xcassets */,
 				D1A0FF882062993C00B337F4 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				D1A0FF922062996900B337F4 /* ItemsViewController.swift in Sources */,
 				D1A0FF9420629A2A00B337F4 /* Item.swift in Sources */,
 				D1A0FF9620629D2F00B337F4 /* ItemStore.swift in Sources */,
+				D1A0FF9A2066B95600B337F4 /* DetailViewController.swift in Sources */,
 				D1A0FF802062993C00B337F4 /* AppDelegate.swift in Sources */,
 				D1A0FF982065440400B337F4 /* ItemCell.swift in Sources */,
 			);

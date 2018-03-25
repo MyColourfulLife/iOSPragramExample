@@ -8,13 +8,18 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var nameField: UITextField!
     @IBOutlet var valueField: UITextField!
     @IBOutlet var serialField: UITextField!
     @IBOutlet var dateLabel: UILabel!
     
-    var  item:Item!
+    var  item:Item! {
+        didSet {
+            navigationItem.title = item.name
+        }
+    }
+    
     
     
     let numberFormatter : NumberFormatter = {
@@ -32,6 +37,8 @@ class DetailViewController: UIViewController {
         return dateFormatter
     }()
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -44,4 +51,28 @@ class DetailViewController: UIViewController {
     }
     
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        view.endEditing(true)
+        
+        item.name = nameField.text ?? ""
+        item.serialNumber = serialField.text
+        
+        if let valueText = valueField.text, let value = numberFormatter.number(from: valueText) {
+            item.valueInDollars = value.intValue
+        } else {
+            item.valueInDollars = 0
+        }
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @IBAction func backgroundTaped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }

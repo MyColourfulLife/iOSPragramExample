@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D18B766A2067E3BE00CED581 /* JSTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B76692067E3BE00CED581 /* JSTextFiled.swift */; };
+		D18B766C206949DC00CED581 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B766B206949DC00CED581 /* ImageStore.swift */; };
 		D1A0FF802062993C00B337F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A0FF7F2062993C00B337F4 /* AppDelegate.swift */; };
 		D1A0FF852062993C00B337F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A0FF832062993C00B337F4 /* Main.storyboard */; };
 		D1A0FF872062993C00B337F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A0FF862062993C00B337F4 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		D18B76692067E3BE00CED581 /* JSTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSTextFiled.swift; sourceTree = "<group>"; };
+		D18B766B206949DC00CED581 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		D1A0FF7C2062993C00B337F4 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A0FF7F2062993C00B337F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A0FF842062993C00B337F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				D1A0FF972065440400B337F4 /* ItemCell.swift */,
 				D1A0FF992066B95600B337F4 /* DetailViewController.swift */,
 				D18B76692067E3BE00CED581 /* JSTextFiled.swift */,
+				D18B766B206949DC00CED581 /* ImageStore.swift */,
 				D1A0FF832062993C00B337F4 /* Main.storyboard */,
 				D1A0FF862062993C00B337F4 /* Assets.xcassets */,
 				D1A0FF882062993C00B337F4 /* LaunchScreen.storyboard */,
@@ -154,6 +157,7 @@
 				D1A0FF922062996900B337F4 /* ItemsViewController.swift in Sources */,
 				D1A0FF9420629A2A00B337F4 /* Item.swift in Sources */,
 				D1A0FF9620629D2F00B337F4 /* ItemStore.swift in Sources */,
+				D18B766C206949DC00CED581 /* ImageStore.swift in Sources */,
 				D18B766A2067E3BE00CED581 /* JSTextFiled.swift in Sources */,
 				D1A0FF9A2066B95600B337F4 /* DetailViewController.swift in Sources */,
 				D1A0FF802062993C00B337F4 /* AppDelegate.swift in Sources */,

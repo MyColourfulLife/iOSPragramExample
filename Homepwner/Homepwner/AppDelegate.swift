@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = window!.rootViewController as! UINavigationController
         let itemsController = navigationController.topViewController as! ItemsViewController
         itemsController.itemsStore = itemsStore
+        itemsController.imageStore = ImageStore()
         
         return true
     }

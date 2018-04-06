@@ -41,6 +41,10 @@ class PhotoStore {
     }
     
     func fetchImageForPohto(photo:Photo,comletion:@escaping (ImageResult)->Void) {
+        if let image = photo.image {
+            comletion(.Success(image))
+            return
+        }
         let photoURl = photo.remoteURL
         let request = URLRequest(url: photoURl)
         let task = session.dataTask(with: request) { (data, response, error) in

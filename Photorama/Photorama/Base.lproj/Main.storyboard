@@ -90,12 +90,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aJT-DS-Qj3">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vNP-hv-KSn">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Tags" id="qEA-nq-Vug">
+                                        <connections>
+                                            <segue destination="SUW-ML-79C" kind="presentation" identifier="ShowTags" id="oPo-hx-ube"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IFD-n6-V4w" firstAttribute="trailing" secondItem="aJT-DS-Qj3" secondAttribute="trailing" id="qHv-Ed-GQY"/>
                             <constraint firstItem="aJT-DS-Qj3" firstAttribute="top" secondItem="IFD-n6-V4w" secondAttribute="top" id="ryG-Hx-yp7"/>
+                            <constraint firstItem="vNP-hv-KSn" firstAttribute="leading" secondItem="IFD-n6-V4w" secondAttribute="leading" id="s9v-NV-Noc"/>
+                            <constraint firstItem="IFD-n6-V4w" firstAttribute="bottom" secondItem="vNP-hv-KSn" secondAttribute="bottom" id="ta6-PP-5im"/>
                             <constraint firstItem="aJT-DS-Qj3" firstAttribute="leading" secondItem="IFD-n6-V4w" secondAttribute="leading" id="xOJ-EL-3UL"/>
+                            <constraint firstItem="vNP-hv-KSn" firstAttribute="trailing" secondItem="IFD-n6-V4w" secondAttribute="trailing" id="xeG-GY-crX"/>
                             <constraint firstItem="IFD-n6-V4w" firstAttribute="bottom" secondItem="aJT-DS-Qj3" secondAttribute="bottom" id="zoR-20-k6n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IFD-n6-V4w"/>
@@ -107,6 +120,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpH-gl-rsB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1535" y="493"/>
+        </scene>
+        <!--Tags-->
+        <scene sceneID="LdZ-DQ-Hrp">
+            <objects>
+                <tableViewController id="haK-bY-J3S" customClass="TagsViewController" customModule="Photorama" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uuQ-n5-226">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="xZf-cq-rcR" style="IBUITableViewCellStyleDefault" id="Gty-if-Heo">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gty-if-Heo" id="jcc-M0-4v9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xZf-cq-rcR">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="haK-bY-J3S" id="Urs-ha-81j"/>
+                            <outlet property="delegate" destination="haK-bY-J3S" id="9VX-ah-MtW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tags" id="f4N-Ce-UVx">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="Jve-rf-l3y">
+                            <connections>
+                                <action selector="done:" destination="haK-bY-J3S" id="eCZ-Sq-DR2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="l6H-Ql-git">
+                            <connections>
+                                <action selector="addNewTag:" destination="haK-bY-J3S" id="dob-aF-qTu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="03j-Ge-xCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3477" y="471"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fCB-OP-3j1">
+            <objects>
+                <navigationController id="SUW-ML-79C" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Z8-Lj-zks">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="haK-bY-J3S" kind="relationship" relationship="rootViewController" id="xfQ-1r-Lna"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTH-z1-N8k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2525" y="471"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kn2-oE-7R5">

@@ -20,6 +20,8 @@
 		D1936B7C2077755000D00B30 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1936B7A2077755000D00B30 /* Photo+CoreDataProperties.swift */; };
 		D1936B7E2077762600D00B30 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1936B7D2077762600D00B30 /* CoreDataStack.swift */; };
 		D1936B822077929B00D00B30 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1936B812077929A00D00B30 /* ImageStore.swift */; };
+		D1936B842077994B00D00B30 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1936B832077994B00D00B30 /* TagsViewController.swift */; };
+		D1936B86207799CE00D00B30 /* TagsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1936B85207799CE00D00B30 /* TagsDataSource.swift */; };
 		D199E95F20771B6D00F1A765 /* PhotoDataSoucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = D199E95E20771B6D00F1A765 /* PhotoDataSoucre.swift */; };
 		D199E961207721DC00F1A765 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D199E960207721DC00F1A765 /* PhotoCollectionViewCell.swift */; };
 		D199E96320772A4D00F1A765 /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D199E96220772A4D00F1A765 /* PhotoInfoViewController.swift */; };
@@ -41,6 +43,8 @@
 		D1936B7A2077755000D00B30 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D1936B7D2077762600D00B30 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		D1936B812077929A00D00B30 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageStore.swift; path = ../../Homepwner/Homepwner/ImageStore.swift; sourceTree = "<group>"; };
+		D1936B832077994B00D00B30 /* TagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		D1936B85207799CE00D00B30 /* TagsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsDataSource.swift; sourceTree = "<group>"; };
 		D199E95E20771B6D00F1A765 /* PhotoDataSoucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataSoucre.swift; sourceTree = "<group>"; };
 		D199E960207721DC00F1A765 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D199E96220772A4D00F1A765 /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				D199E960207721DC00F1A765 /* PhotoCollectionViewCell.swift */,
 				D199E96220772A4D00F1A765 /* PhotoInfoViewController.swift */,
 				D1936B7D2077762600D00B30 /* CoreDataStack.swift */,
+				D1936B832077994B00D00B30 /* TagsViewController.swift */,
+				D1936B85207799CE00D00B30 /* TagsDataSource.swift */,
 				D1936B6C20776F4800D00B30 /* Photorama.xcdatamodeld */,
 				D18B769F206FD59E00CED581 /* Main.storyboard */,
 				D18B76A2206FD59E00CED581 /* Assets.xcassets */,
@@ -124,7 +130,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = huangjs;
 				TargetAttributes = {
 					D18B7697206FD59E00CED581 = {
@@ -177,9 +183,11 @@
 				D1936B822077929B00D00B30 /* ImageStore.swift in Sources */,
 				D18B76AE206FD5C100CED581 /* PhotosViewController.swift in Sources */,
 				D1936B6E20776F4800D00B30 /* Photorama.xcdatamodeld in Sources */,
+				D1936B86207799CE00D00B30 /* TagsDataSource.swift in Sources */,
 				D18B769E206FD59E00CED581 /* ViewController.swift in Sources */,
 				D18B769C206FD59E00CED581 /* AppDelegate.swift in Sources */,
 				D1936B7C2077755000D00B30 /* Photo+CoreDataProperties.swift in Sources */,
+				D1936B842077994B00D00B30 /* TagsViewController.swift in Sources */,
 				D18B76B0206FD6FF00CED581 /* FlickrAPI.swift in Sources */,
 				D199E96320772A4D00F1A765 /* PhotoInfoViewController.swift in Sources */,
 			);
@@ -221,6 +229,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -228,6 +237,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -278,6 +288,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -285,6 +296,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

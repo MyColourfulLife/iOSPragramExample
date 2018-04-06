@@ -22,5 +22,6 @@ extension Photo {
     @NSManaged public var title: String
     @NSManaged public var dateTaken: NSDate
     @NSManaged public var remoteURL: URL
+    @NSManaged var tags: Set<NSManagedObject>
 
 }

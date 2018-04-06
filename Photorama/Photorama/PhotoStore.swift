@@ -33,7 +33,7 @@ class PhotoStore {
         let task = session.dataTask(with: request) { (data, response, error) in
            var result = self.processRecentPhotosRequest(data: data, error: error)
             if case let .Success(photos) = result {
-                let mainQueueContext = self.coreDataStack.mainQueueContext
+                let mainQueueContext = self.coreDataStack.privateQueueContext
                 mainQueueContext.performAndWait {
                     try! mainQueueContext.obtainPermanentIDs(for: photos)
                 }
@@ -60,7 +60,7 @@ class PhotoStore {
         guard let jsonData = data else {
             return .Failure(error!)
         }
-        return FlickrAPI.photosFromJSONData(data: jsonData , inContext: self.coreDataStack.mainQueueContext)
+        return FlickrAPI.photosFromJSONData(data: jsonData , inContext: self.coreDataStack.privateQueueContext)
     }
     
     func fetchImageForPohto(photo:Photo,comletion:@escaping (ImageResult)->Void) {
@@ -111,4 +111,30 @@ class PhotoStore {
         }
         return photos
     }
+    
+    func fetchMainQueueTags(predicate: NSPredicate? = nil, sortDescriptors:[NSSortDescriptor]?=nil)throws -> [NSManagedObject] {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Tag")
+        fetchRequest.predicate = predicate
+        fetchRequest.sortDescriptors = sortDescriptors
+        
+        let mainQueueContext = self.coreDataStack.mainQueueContext
+        var mainQueueTags: [NSManagedObject]?
+        var fetchRequestError:Error?
+        mainQueueContext.performAndWait {
+            do {
+                mainQueueTags = try mainQueueContext.fetch(fetchRequest)
+            }catch let error {
+                fetchRequestError = error
+            }
+        }
+        guard let tags = mainQueueTags else {
+            throw fetchRequestError!
+        }
+        
+        return tags
+    }
+    
+    
+    
+    
 }

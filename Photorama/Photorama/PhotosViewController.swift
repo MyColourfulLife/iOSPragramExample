@@ -21,18 +21,12 @@ class PhotosVewController: UIViewController,UICollectionViewDelegate {
         collectionView.delegate = self
         
         photoStore.fetchRecentPhotos { (photosResult) in
-            OperationQueue.main.addOperation {
-                switch photosResult {
-                    
-                case let  .Success(photos):
-                    print("Successful found \(photos.count) recent photos")
-                    self.photoDataSoucrce.photos = photos
-                case let  .Failure(error):
-                    self.photoDataSoucrce.photos.removeAll()
-                    print("Error fetching recent photos :\(error)")
-                }
-                self.collectionView.reloadSections(IndexSet(integer: 0))
-            }
+            let sortByDateTaken = NSSortDescriptor(key: "dateTaken", ascending: true)
+            let allPhotos = try! self.photoStore.fetchMainQueuePhotos(predicate: nil, sortDescriptors: [sortByDateTaken])
+            OperationQueue.main.addOperation({
+                self.photoDataSoucrce.photos = allPhotos
+                self.collectionView.reloadSections(NSIndexSet(index: 0) as IndexSet)
+            })
         }
     }
     
